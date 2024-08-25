@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 28% 7%;
+    --foreground: 210 17% 82%;
+    --muted: 216 12% 15%;
+    --muted-foreground: 216 12% 65%;
+    --popover: 216 28% 4%;
+    --popover-foreground: 210 17% 92%;
+    --card: 216 28% 5%;
+    --card-foreground: 210 17% 87%;
+    --border: 216 18% 12%;
+    --input: 216 18% 15%;
+    --primary: 210 17% 82%;
+    --primary-foreground: 210 17% 22%;
+    --secondary: 210 7% 25%;
+    --secondary-foreground: 210 7% 85%;
+    --accent: 216 28% 22%;
+    --accent-foreground: 216 28% 82%;
+    --destructive: 1 86% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 210 17% 82%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .background {
+    position: relative;
+  }
+  
+  .background .pie {
+    width: 30%;
+    height: 30%;
+    border-top-left-radius: 100%;
+    position: absolute;
+    transform-origin: right;
+    filter: blur(100px);
+    opacity: 30%;
+  }
+  
+  .background .pie.wineberry {
+    transform: rotate(80deg);
+    background: radial-gradient(circle at bottom right, white, #0c95de 40%);
+  }
+  
+  .background .pie.cello {
+    transform: rotate(390deg);
+    background: radial-gradient(circle at bottom right, white, #311c4a 40%);
+  }
+  
+  .background .pie.greenpea {
+    transform: rotate(180deg);
+    background: radial-gradient(circle at bottom right, rgb(255, 0, 0), #431866 10%);
+  }
+  
+  .background .pie.greenpea2 {
+    transform: rotate(45deg);
+  }
+  
+  .background .pie.astronaut {
+    transform: rotate(13deg);
+    background: radial-gradient(circle at bottom right, white, #00eaff 40%);
+  }
+  
+}
